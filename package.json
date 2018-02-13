@@ -1,0 +1,44 @@
+{
+  "name": "@ttskch/select2-bootstrap4-theme",
+  "version": "1.0.2",
+  "description": "Select2 v4 theme for Bootstrap4",
+  "main": "",
+  "style": "select2-bootstrap4.css",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
+    "release": "npm run build && npm run build:prod",
+    "watch": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ttskch/select2-bootstrap4-theme.git"
+  },
+  "keywords": [
+    "select2",
+    "theme",
+    "bootstrap",
+    "bootstrap4",
+    "css",
+    "scss"
+  ],
+  "author": "ttskch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ttskch/select2-bootstrap4-theme/issues"
+  },
+  "homepage": "https://github.com/ttskch/select2-bootstrap4-theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "bootstrap": "^4.0.0",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.17",
+    "postcss-loader": "^2.1.0",
+    "precss": "^3.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.11.0"
+  }
+}
