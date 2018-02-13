@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
-    "release": "npm run build && npm run build:prod",
+    "build:both": "npm run build && npm run build:prod",
     "watch": "npm run build -- --watch"
   },
   "repository": {
