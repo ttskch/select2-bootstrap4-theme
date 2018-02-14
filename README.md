@@ -27,3 +27,9 @@ $('select').select2({
     theme: 'bootstrap4',
 });
 ```
+
+## Getting involved
+
+1. Fix [src/layout.scss](src/layout.scss), [src/_single.scss](src/_single.scss) or [src/_multiple.scss](src/_multiple.scss)
+1. Do `npm run build:both`
+1. Send me a Pull Requeest
