@@ -7,7 +7,7 @@
 
 ## Live demo
 
-👉 https://run.plnkr.co/plunks/YFhC0HYNJPKjXl2wIDGZ/
+👉 https://embed.plnkr.co/YFhC0HYNJPKjXl2wIDGZ/
 
 ## Installation
 
