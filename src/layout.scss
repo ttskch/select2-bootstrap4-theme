@@ -68,6 +68,13 @@
     .select2-results__option[role=group] {
         padding: 0;
     }
+
+    // fixes vertical overflow
+    .select2-results__options {
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
     .select2-results__group {
         padding: 6px;
         display: list-item;
