@@ -37,18 +37,22 @@ module.exports = {
                     use: [
                         {
                             loader: 'css-loader',
-                            options: {
-                                minimize: isProd,
-                            }
                         },
                         {
                             loader: 'postcss-loader',
                             options: {
                                 plugins: () => {
-                                    return [
+                                    let plugins = [
                                         require('precss'),  // bootstrap4 requires this
                                         require('autoprefixer')({ browsers: ['last 2 versions'] }),
                                     ];
+                                    if (isProd) {
+                                      plugins = plugins.concat([
+                                        require('cssnano')({ preset: 'default' }),
+                                      ])
+                                    }
+
+                                    return plugins;
                                 },
                             },
                         },
