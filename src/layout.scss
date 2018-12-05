@@ -71,9 +71,9 @@
 
     // fixes vertical overflow
     .select2-results__options {
-        max-height: 200px;
+        max-height: 15em;
         overflow-y: auto;
-      }
+    }
 
     .select2-results__group {
         padding: 6px;
