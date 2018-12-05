@@ -99,6 +99,10 @@ select.is-valid ~ .select2-container--bootstrap4 .select2-selection {
 .select2-container--bootstrap4 .select2-results__option[role=group] {
   padding: 0; }
 
+.select2-container--bootstrap4 .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto; }
+
 .select2-container--bootstrap4 .select2-results__group {
   padding: 6px;
   display: list-item;
