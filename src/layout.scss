@@ -35,6 +35,20 @@
         }
     }
 
+    // disabled input box
+    &.select2-container--disabled,
+    &.select2-container--disabled.select2-container--focus {
+        .select2-selection {
+            background-color: $input-disabled-bg;
+            cursor: not-allowed;
+            border-color: $input-border-color;
+            box-shadow: none;
+        }
+        .select2-search__field {
+            background-color: transparent;
+        }
+    }
+
     // validated input box
     select.is-invalid ~ & .select2-selection {
         border-color: $danger;

@@ -77,6 +77,16 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
 
+.select2-container--bootstrap4.select2-container--disabled .select2-selection, .select2-container--bootstrap4.select2-container--disabled.select2-container--focus .select2-selection {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  border-color: #ced4da;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.select2-container--bootstrap4.select2-container--disabled .select2-search__field, .select2-container--bootstrap4.select2-container--disabled.select2-container--focus .select2-search__field {
+  background-color: transparent; }
+
 select.is-invalid ~ .select2-container--bootstrap4 .select2-selection {
   border-color: #dc3545; }
 
