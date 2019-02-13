@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 @import "single";
 @import "multiple";
@@ -15,8 +16,11 @@
 
     // input box
     .select2-selection {
+        background-color: $input-bg;
         border: $input-border-width solid $input-border-color;
-        border-radius: $input-border-radius;
+        @include border-radius($input-border-radius, 0);
+        @include box-shadow($input-box-shadow);
+        @include transition($input-transition);
         width: 100%;
     }
 
