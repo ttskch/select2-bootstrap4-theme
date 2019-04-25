@@ -64,6 +64,15 @@
   .select2-container *:focus {
     outline: 0; }
 
+.input-group .select2-container--bootstrap4 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.input-group-prepend ~ .select2-container--bootstrap4 .select2-selection {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
 .select2-container--bootstrap4 .select2-selection {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
