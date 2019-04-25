@@ -13,6 +13,20 @@
     }
 }
 
+// input-group
+.input-group .select2-container--bootstrap4 {
+    flex-grow: 1;
+}
+.input-group-prepend ~ .select2-container--bootstrap4 .select2-selection {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+// waiting css4
+//.select2-container--bootstrap4:has(~ .input-group-append) .select2-selection {
+//    border-top-right-radius: 0;
+//    border-bottom-right-radius: 0;
+//}
+
 .select2-container--bootstrap4 {
 
     // input box
