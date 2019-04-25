@@ -7,7 +7,7 @@
 
 ## Live demo
 
-👉 https://embed.plnkr.co/YFhC0HYNJPKjXl2wIDGZ/
+👉 https://ttskch.github.io/select2-bootstrap4-theme/
 
 ## Installation
 
