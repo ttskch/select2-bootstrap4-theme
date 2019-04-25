@@ -8,6 +8,8 @@
 
   <!-- select2-bootstrap4-theme -->
   <link href="https://rawcdn.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.min.css" rel="stylesheet">
+  <!-- please comment in when you develop on your local env -->
+  <!--<link href="select2-bootstrap4.css" rel="stylesheet">-->
 </head>
 
 <body class="pt-5" style="min-height:90vh">
@@ -19,7 +21,7 @@
   <form>
     <div class="form-group">
       <label>Example select</label>
-      <select class="form-control" id="select-single" placeholder="Choose one thing" data-allow-clear="1">
+      <select id="select-single" placeholder="Choose one thing" data-allow-clear="1">
         <option></option>
         <option>1</option>
         <option>2</option>
@@ -30,12 +32,17 @@
     </div>
     <div class="form-group">
       <label>Example multiple select</label>
-      <select multiple class="form-control" placeholder="Choose anything" data-allow-clear="1">
+      <select multiple placeholder="Choose anything" data-allow-clear="1">
         <option>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
         <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Example disabled select</label>
+      <select disabled placeholder="Cannot choose">
       </select>
     </div>
   </form>
