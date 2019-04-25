@@ -6,6 +6,8 @@
 
 // basic
 .select2-container {
+    display: block;
+
     *:focus {
         outline: 0;
     }
