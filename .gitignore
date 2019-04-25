@@ -4,3 +4,5 @@
 node_modules
 package-lock.json
 dist/*.js
+
+docs/select2-bootstrap4.css

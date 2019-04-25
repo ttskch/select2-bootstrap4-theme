@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.config.js",
     "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
     "build:both": "npm run build && npm run build:prod",
-    "watch": "npm run build -- --watch"
+    "prepare": "ln -sf ../dist/select2-bootstrap4.css docs/",
+    "watch": "npm run prepare && npm run build -- --watch"
   },
   "repository": {
     "type": "git",
