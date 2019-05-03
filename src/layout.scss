@@ -81,6 +81,13 @@
         border-top-left-radius: 0;
         border-top-right-radius: 0;
 
+        // dropdown opened above
+        &.select2-dropdown--above {
+            border-top: 1px solid $input-border-color;
+            border-top-left-radius: $input-border-radius;
+            border-top-right-radius: $input-border-radius;
+        }
+
         // selected item
         .select2-results__option[aria-selected=true] {
             background-color: darken($light, 5%);
