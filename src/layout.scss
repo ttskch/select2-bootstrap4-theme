@@ -21,7 +21,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-// waiting css4
+// waiting for css4
 //.select2-container--bootstrap4:has(~ .input-group-append) .select2-selection {
 //    border-top-right-radius: 0;
 //    border-bottom-right-radius: 0;
@@ -66,10 +66,12 @@
     }
 
     // validated input box
-    select.is-invalid ~ & .select2-selection {
+    select.is-invalid ~ & .select2-selection,
+    form.was-validated select:invalid ~ & .select2-selection {
         border-color: $danger;
     }
-    select.is-valid ~ & .select2-selection {
+    select.is-valid ~ & .select2-selection,
+    form.was-validated select:valid ~ & .select2-selection {
         border-color: $success;
     }
 
