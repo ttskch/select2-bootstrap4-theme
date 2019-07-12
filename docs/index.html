@@ -20,7 +20,7 @@
   <form>
     <div class="form-group">
       <label>Example of select</label>
-      <select id="select-single" placeholder="Choose one thing" data-allow-clear="1">
+      <select placeholder="Choose one thing" data-allow-clear="1">
         <option></option>
         <option>1</option>
         <option>2</option>
@@ -72,6 +72,15 @@
           <option>2</option>
           <option>3</option>
         </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Example of validated select</label>
+      <select placeholder="Invalid example" class="form-control is-invalid">
+        <option></option>
+      </select>
+      <div class="invalid-feedback">
+        Something is wrong.
       </div>
     </div>
   </form>
