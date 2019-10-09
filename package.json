@@ -43,5 +43,6 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.27.0",
     "webpack-cli": "^3.1.2"
-  }
+  },
+  "jsdelivr": "dist/select2-bootstrap4.min.css"
 }
