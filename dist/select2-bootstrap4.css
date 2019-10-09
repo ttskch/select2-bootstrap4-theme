@@ -69,7 +69,7 @@
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
-.input-group > .select2-container--bootstrap4:not(:first-child) .select2-selection {
+.input-group-prepend ~ .select2-container--bootstrap4 .select2-selection {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
