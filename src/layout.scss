@@ -14,22 +14,21 @@
 }
 
 // input-group
-.input-group .select2-container--bootstrap4 {
-    flex-grow: 1;
+.input-group {
+    .select2-container--bootstrap4 {
+        flex-grow: 1;
+    }
+    // for prepended input
+    > .select2-container--bootstrap4:not(:first-child) .select2-selection {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    // for appended input
+    > .select2-container--bootstrap4:not(:last-child) .select2-selection {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
-.input-group-prepend ~ .select2-container--bootstrap4 .select2-selection {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.input-group > .select2-container--bootstrap4:not(:last-child) .select2-selection {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-// waiting for css4
-//.select2-container--bootstrap4:has(~ .input-group-append) .select2-selection {
-//    border-top-right-radius: 0;
-//    border-bottom-right-radius: 0;
-//}
 
 .select2-container--bootstrap4 {
 
