@@ -78,12 +78,13 @@
   border-bottom-right-radius: 0; }
 
 .select2-container--bootstrap4 .select2-selection {
+  background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   width: 100%; }
 
 .select2-container--bootstrap4.select2-container--focus .select2-selection {
-  border-color: #17a2b8;
+  border-color: #80bdff;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
