@@ -34,6 +34,7 @@
 
     // input box
     .select2-selection {
+        background-color: $input-bg;
         border: $input-border-width solid $input-border-color;
         border-radius: $input-border-radius;
         width: 100%;
@@ -42,7 +43,7 @@
     // focused input box
     &.select2-container--focus {
         .select2-selection {
-            border-color: $info;
+            border-color: $input-focus-border-color;
             box-shadow: $input-focus-box-shadow;
         }
 
