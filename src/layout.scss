@@ -20,13 +20,11 @@
 }
 // for prepended input
 .input-group-prepend ~ .select2-container--bootstrap4 .select2-selection {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    @include border-left-radius(0);
 }
 // for appended input
 .input-group > .select2-container--bootstrap4:not(:last-child) .select2-selection {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    @include border-right-radius(0);
 }
 
 .select2-container--bootstrap4 {
@@ -51,8 +49,7 @@
         // when open, hide bottom border
         &.select2-container--open .select2-selection {
             border-bottom: none;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            @include border-bottom-radius(0);
         }
     }
 
@@ -85,14 +82,12 @@
         border-color: $input-border-color;
 
         border-top: none;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        @include border-top-radius(0);
 
         // dropdown opened above
         &.select2-dropdown--above {
             border-top: 1px solid $input-border-color;
-            border-top-left-radius: $input-border-radius;
-            border-top-right-radius: $input-border-radius;
+            @include border-top-radius($input-border-radius);
         }
 
         // selected item
@@ -132,7 +127,7 @@
         line-height: 1.15em;
         padding-left: 0.3em;
         margin-top: 0.5em;
-        border-radius: 100%;
+        @include border-radius(100%, 0);
 
         background-color: $secondary;
         color: $light;

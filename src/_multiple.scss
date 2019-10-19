@@ -17,7 +17,7 @@
         .select2-selection__choice {
             color: $dark;
             border: 1px solid darken($light, 20%);
-            border-radius: $btn-border-radius-sm;
+            @include border-radius($input-border-radius-sm, 0);
             padding: 0;
             padding-right: 5px;
             cursor: pointer;
