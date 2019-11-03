@@ -99,6 +99,12 @@
         .select2-results__option[aria-selected=true] {
             background-color: darken($light, 5%);
         }
+
+
+        &[dir="rtl"] {
+            direction: rtl;
+            text-align: right;
+        }
     }
 
     // mouse hovered item
@@ -143,4 +149,10 @@
             background-color: $dark;
         }
     }
+}
+
+.select2-container--bootstrap4[dir="rtl"] .selection .select2-selection .select2-selection__rendered .select2-selection__clear {
+    float: left;
+    padding-right: 3.8px;
+    padding-left: 4.8px;
 }
