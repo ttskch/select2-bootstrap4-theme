@@ -29,6 +29,19 @@ $('select').select2({
 });
 ```
 
+### RTL usage
+
+```js
+$('select').select2({
+    theme: 'bootstrap4',
+    dir: "rtl"
+});
+```
+
+Jus add option ``dir: "rtl"``
+
+Single choose has been code in first step. Multi choose RTL support can be added later. 
+
 ## Getting involved
 
 1. Fix [src/layout.scss](src/layout.scss), [src/_single.scss](src/_single.scss) or [src/_multiple.scss](src/_multiple.scss)

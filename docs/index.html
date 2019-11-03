@@ -9,6 +9,9 @@
   <!-- select2-bootstrap4-theme -->
   <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet"> <!-- for live demo page -->
   <link href="select2-bootstrap4.css" rel="stylesheet"> <!-- for local development env -->
+  <style>
+    /* body { direction: rtl; text-align: right;} */
+  </style>
 </head>
 
 <body class="pt-5" style="min-height:90vh">
@@ -17,7 +20,7 @@
   <h3>Example of <a href="https://github.com/ttskch/select2-bootstrap4-theme" target="_blank">@ttskch/select2-bootstrap4-theme</a></h3>
   <hr>
 
-  <form>
+  <form id="ltr-selects">
     <div class="form-group">
       <label>Example of select</label>
       <select placeholder="Choose one thing" data-allow-clear="1">
@@ -109,6 +112,20 @@
       </div>
     </div>
   </form>
+  <form id="rtl-selects" style="direction: rtl;text-align: right;">
+      <div class="form-group">
+          <label>Example of RTL select</label>
+          <select placeholder="Choose one thing" data-allow-clear="1">
+            <option></option>
+            <option>یک</option>
+            <option>دو</option>
+            <option>سه</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+  </form>
+
 </div>
 
 <!-- bootstrap -->
