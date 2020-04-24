@@ -44,7 +44,7 @@ module.exports = {
                                 plugins: () => {
                                     let plugins = [
                                         require('precss'),  // bootstrap4 requires this
-                                        require('autoprefixer')({ browsers: ['last 2 versions'] }),
+                                        require('autoprefixer'),
                                     ];
                                     if (isProd) {
                                       plugins = plugins.concat([

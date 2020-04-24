@@ -5,8 +5,8 @@
   "main": "",
   "style": "select2-bootstrap4.css",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --mode development",
+    "build:prod": "NODE_ENV=production webpack --config webpack.config.js --mode production",
     "build:both": "npm run build && npm run build:prod",
     "prepare": "ln -sf ../dist/select2-bootstrap4.css docs/",
     "watch": "npm run prepare && npm run build -- --watch"
@@ -44,5 +44,9 @@
     "webpack": "^4.27.0",
     "webpack-cli": "^3.1.2"
   },
-  "jsdelivr": "dist/select2-bootstrap4.min.css"
+  "jsdelivr": "dist/select2-bootstrap4.min.css",
+  "browserslist": [
+    "last 2 versions",
+    "ios >= 9"
+  ]
 }
