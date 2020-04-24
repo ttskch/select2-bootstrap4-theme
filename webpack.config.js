@@ -58,6 +58,13 @@ module.exports = {
             },
             {
               loader: 'sass-loader',
+              options: {
+                prependData: `
+                  @import "~bootstrap/scss/functions";
+                  @import "~bootstrap/scss/variables";
+                  @import "~bootstrap/scss/mixins";
+                `
+              }
             },
           ],
         }),
