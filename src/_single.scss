@@ -42,7 +42,7 @@
 // search box
 .select2-search--dropdown .select2-search__field {
   border: $input-border-width solid $input-border-color;
-  border-radius: $input-border-radius;
+  @include border-radius($input-border-radius);
 }
 
 // no result message

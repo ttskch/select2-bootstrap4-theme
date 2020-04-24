@@ -129,9 +129,11 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
 
 .select2-container--bootstrap4 .select2-dropdown {
   border-color: #ced4da;
-  border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
+  border-radius: 0; }
+  .select2-container--bootstrap4 .select2-dropdown.select2-dropdown--below {
+    border-top: none;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
   .select2-container--bootstrap4 .select2-dropdown.select2-dropdown--above {
     border-top: 1px solid #ced4da;
     border-top-left-radius: 0.25rem;

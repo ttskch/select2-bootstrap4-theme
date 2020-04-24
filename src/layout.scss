@@ -83,16 +83,18 @@
   // dropdown
   .select2-dropdown {
     border-color: $input-border-color;
+    border-radius: 0; // overwrite select2.css
 
-    border-top: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    // dropdown opened below
+    &.select2-dropdown--below {
+      border-top: none;
+      @include border-bottom-radius($input-border-radius);
+    }
 
     // dropdown opened above
     &.select2-dropdown--above {
       border-top: 1px solid $input-border-color;
-      border-top-left-radius: $input-border-radius;
-      border-top-right-radius: $input-border-radius;
+      @include border-top-radius($input-border-radius);
     }
 
     // selected item
