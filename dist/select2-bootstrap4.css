@@ -139,6 +139,8 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
 
 .select2-container--bootstrap4 .select2-results__option[role=group] {
   padding: 0; }
+  .select2-container--bootstrap4 .select2-results__option[role=group] .select2-results__options--nested .select2-results__option {
+    padding-left: 1em; }
 
 .select2-container--bootstrap4 .select2-results > .select2-results__options {
   max-height: 15em;

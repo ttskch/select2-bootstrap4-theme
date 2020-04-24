@@ -111,6 +111,10 @@
   // for <optgroup>
   .select2-results__option[role=group] {
     padding: 0;
+
+    .select2-results__options--nested .select2-results__option {
+      padding-left: 1em;
+    }
   }
 
   // fixes vertical overflow
