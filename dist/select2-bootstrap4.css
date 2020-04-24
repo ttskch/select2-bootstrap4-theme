@@ -60,6 +60,12 @@
     float: left; }
     .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice__remove:hover {
       color: #343a40; }
+  .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear {
+    float: none;
+    margin-right: 0;
+    position: absolute !important;
+    top: 0;
+    right: 0.7em; }
 
 .select2-container {
   display: block; }

@@ -44,5 +44,16 @@
         color: $dark;
       }
     }
+
+    // all clear button
+    .select2-selection__clear {
+      // overwrite layout.scss
+      float: none;
+      margin-right: 0;
+
+      position: absolute !important;
+      top: 0;
+      right: 0.7em;
+    }
   }
 }
