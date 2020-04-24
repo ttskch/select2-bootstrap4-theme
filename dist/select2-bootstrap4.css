@@ -149,15 +149,15 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
   color: #6c757d; }
 
 .select2-container--bootstrap4 .select2-selection__clear {
-  width: 1.2em;
-  height: 1.2em;
-  line-height: 1.15em;
-  padding-left: 0.3em;
-  margin-top: 0.5em;
+  width: 0.9em;
+  height: 0.9em;
+  line-height: 0.75em;
+  padding-left: 0.15em;
+  margin-top: 0.7em;
   border-radius: 100%;
-  background-color: #6c757d;
+  background-color: #c8c8c8;
   color: #f8f9fa;
   float: right;
   margin-right: 0.3em; }
   .select2-container--bootstrap4 .select2-selection__clear:hover {
-    background-color: #343a40; }
+    background-color: #afafaf; }
