@@ -1,18 +1,11 @@
 const path = require('path');
 
-const ProvidePlugin = require('webpack/lib/ProvidePlugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
 let plugins = [
-  new ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    'window.jQuery': 'jquery',
-    Popper: ['popper.js', 'default'],
-  }),
-  new ExtractTextPlugin({
+  new MiniCssExtractPlugin({
     filename: '[name]' + (isProd ? '.min' : '') + '.css',
     allChunks: true,
   }),
@@ -32,9 +25,10 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
+        use: [
+			{
+            	loader: MiniCssExtractPlugin.loader,
+			},
             {
               loader: 'css-loader',
             },
@@ -66,8 +60,7 @@ module.exports = {
                 `
               }
             },
-          ],
-        }),
+		]
       },
     ],
   },
