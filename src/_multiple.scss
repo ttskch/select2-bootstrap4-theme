@@ -1,6 +1,8 @@
 .select2-container--bootstrap4 {
   .select2-selection--multiple {
 
+	padding: 0 5px 0 5px;
+
     // height of input box
     min-height: $input-height !important;
 
@@ -9,8 +11,9 @@
       box-sizing: border-box;
       list-style: none;
       margin: 0;
-      padding: 0 8px;
+      padding: 0;
       width: 100%;
+	  white-space: normal;
 
       .select2-search__field {
         width: 100% !important;
@@ -22,23 +25,21 @@
       color: $dark;
       border: 1px solid darken($light, 20%);
       @include border-radius($input-border-radius-sm);
-      padding: 0;
-      padding-right: 5px;
+      padding: 0 5px 0 0;
       cursor: pointer;
-      float: left;
+      display: inline-block;
       margin-top: 0.3em;
       margin-right: 5px;
     }
 
     // x button of each selected item in input box
     .select2-selection__choice__remove {
-      color: darken($light, 20%);
+      color: darken($light, 40%);
       font-weight: bold;
-      margin-left: 3px;
-      margin-right: 1px;
-      padding-right: 3px;
-      padding-left: 3px;
+      margin-right: 5px;
+      padding: 0 5px;
       float: left;
+	  border: $btn-border-width solid transparent;
 
       &:hover {
         color: $dark;
@@ -48,12 +49,19 @@
     // all clear button
     .select2-selection__clear {
       // overwrite layout.scss
+	  color: darken($light, 60%);
       float: none;
       margin-right: 0;
 
       position: absolute !important;
       top: 0;
       right: 0.7em;
+
+	  border: $btn-border-width solid transparent;
+
+	  &:hover {
+        color: $dark;
+      }
     }
   }
 }
