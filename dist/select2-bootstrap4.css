@@ -30,42 +30,46 @@
   color: #6c757d; }
 
 .select2-container--bootstrap4 .select2-selection--multiple {
+  padding: 0 5px 0 5px;
   min-height: calc(1.5em + 0.75rem + 2px) !important; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__rendered {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     list-style: none;
     margin: 0;
-    padding: 0 8px;
-    width: 100%; }
+    padding: 0;
+    width: 100%;
+    white-space: normal; }
     .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__rendered .select2-search__field {
       width: 100% !important; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice {
     color: #343a40;
     border: 1px solid #bdc6d0;
     border-radius: 0.2rem;
-    padding: 0;
-    padding-right: 5px;
+    padding: 0 5px 0 0;
     cursor: pointer;
-    float: left;
+    display: inline-block;
     margin-top: 0.3em;
     margin-right: 5px; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice__remove {
-    color: #bdc6d0;
+    color: #8193a5;
     font-weight: bold;
-    margin-left: 3px;
-    margin-right: 1px;
-    padding-right: 3px;
-    padding-left: 3px;
-    float: left; }
+    margin-right: 5px;
+    padding: 0 5px;
+    float: left;
+    border: 1px solid transparent; }
     .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice__remove:hover {
       color: #343a40; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear {
+    color: #506070;
     float: none;
     margin-right: 0;
     position: absolute !important;
     top: 0;
-    right: 0.7em; }
+    right: 0.7em;
+    border: 1px solid transparent; }
+    .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear:hover {
+      color: #343a40; }
 
 .select2-container {
   display: block; }
@@ -173,3 +177,4 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
   margin-right: 0.3em; }
   .select2-container--bootstrap4 .select2-selection__clear:hover {
     background-color: #afafaf; }
+
