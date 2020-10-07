@@ -38,8 +38,6 @@
     margin: 0;
     padding: 0 8px;
     width: 100%; }
-    .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__rendered .select2-search__field {
-      width: 100% !important; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice {
     color: #343a40;
     border: 1px solid #bdc6d0;
