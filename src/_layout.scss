@@ -26,12 +26,13 @@
 
   // input box
   .select2-selection {
+    width: 100%;
     background-color: $input-bg;
     border: $input-border-width solid $input-border-color;
+
     @include border-radius($input-border-radius);
     @include box-shadow($input-box-shadow);
     @include transition($input-transition);
-    width: 100%;
   }
 
   // focused input box
@@ -44,8 +45,23 @@
     // when open, hide bottom border
     &.select2-container--open .select2-selection {
       border-bottom: none;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+
+      @include border-bottom-radius(0);
+    }
+  }
+
+  // open input box
+  &.select2-container--open {
+    &.select2-container--above {
+      .select2-selection {
+        @include border-top-radius(0);
+      }
+    }
+
+    &.select2-container--below {
+      .select2-selection {
+        @include border-bottom-radius(0);
+      }
     }
   }
 
@@ -53,25 +69,29 @@
   &.select2-container--disabled,
   &.select2-container--disabled.select2-container--focus {
     .select2-selection {
-      background-color: $input-disabled-bg;
       cursor: not-allowed;
+      background-color: $input-disabled-bg;
       border-color: $input-border-color;
       box-shadow: none;
     }
+
     .select2-search__field {
       background-color: transparent;
     }
   }
 
   // validated input box
+  // stylelint-disable selector-no-qualifying-type
   select.is-invalid ~ & .select2-selection,
   form.was-validated select:invalid ~ & .select2-selection {
     border-color: $danger;
   }
+
   select.is-valid ~ & .select2-selection,
   form.was-validated select:valid ~ & .select2-selection {
     border-color: $success;
   }
+  // stylelint-enable selector-no-qualifying-type
 
   // fixes placeholder width
   .select2-search {
@@ -86,35 +106,42 @@
     // dropdown opened below
     &.select2-dropdown--below {
       border-top: none;
+
       @include border-bottom-radius($input-border-radius);
     }
 
     // dropdown opened above
     &.select2-dropdown--above {
       border-top: 1px solid $input-border-color;
+
       @include border-top-radius($input-border-radius);
     }
 
     // selected item
-    .select2-results__option[aria-selected=true] {
-      background-color: darken($light, 5%);
+    .select2-results__option[aria-selected="true"] {
+      color: color-yiq(darken($input-bg, 5%));
+      background-color: darken($input-bg, 5%);
     }
   }
 
   // mouse hovered item
   .select2-results__option--highlighted,
-  .select2-results__option--highlighted.select2-results__option[aria-selected=true] {
+  .select2-results__option--highlighted.select2-results__option[aria-selected="true"] {
+    color: color-yiq($primary);
     background-color: $primary;
-    color: $light;
   }
 
   // for <optgroup>
-  .select2-results__option[role=group] {
+  .select2-results__option[role="group"] {
     padding: 0;
 
     .select2-results__options--nested .select2-results__option {
       padding-left: 1em;
     }
+  }
+
+  .select2-results__option {
+    padding: $input-padding-y $input-padding-x;
   }
 
   // fixes vertical overflow
@@ -124,8 +151,8 @@
   }
 
   .select2-results__group {
-    padding: 6px;
     display: list-item;
+    padding: 6px;
     color: $secondary;
   }
 
@@ -133,17 +160,18 @@
   .select2-selection__clear {
     $bg: #c8c8c8;
 
-    width: 0.9em;
-    height: 0.9em;
-    line-height: 0.75em;
-    padding-left: 0.15em;
-    margin-top: 0.7em;
-    border-radius: 100%;
+    float: right;
+
+    width: .9em;
+    height: .9em;
+    padding-left: .15em;
+    margin-top: .7em;
+    margin-right: .3em;
+    line-height: .75em;
+    color: $light;
 
     background-color: $bg;
-    color: $light;
-    float: right;
-    margin-right: 0.3em;
+    border-radius: 100%;
 
     &:hover {
       background-color: darken($bg, 10%);
