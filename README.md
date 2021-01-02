@@ -31,7 +31,7 @@ $('select').select2({
 
 ## Getting involved
 
-1. Fix [src/layout.scss](src/layout.scss), [src/_single.scss](src/_single.scss) or [src/_multiple.scss](src/_multiple.scss)
+1. Fix [src/_layout.scss](src/_layout.scss), [src/_single.scss](src/_single.scss) or [src/_multiple.scss](src/_multiple.scss)
 1. Do `npm run build:both`
 1. Send me a Pull Request
 

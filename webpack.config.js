@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
   return {
     entry: {
       'select2-bootstrap4': [
-        './src/layout.scss',
+        './src/select2-bootstrap4.scss',
       ],
     },
     output: {
