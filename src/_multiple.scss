@@ -57,4 +57,16 @@
       right: 0.7em;
     }
   }
+
+  // hide x button of each selected item in disabled input box
+  &.select2-container--disabled {
+    .select2-selection--multiple {
+      .select2-selection__choice {
+        padding: 0 5px;
+        .select2-selection__choice__remove {
+          display: none;
+        }
+      }
+    }
+  }
 }
