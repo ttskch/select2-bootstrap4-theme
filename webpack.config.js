@@ -1,75 +1,64 @@
-const path = require('path');
+const path = require('path')
 
-const ProvidePlugin = require('webpack/lib/ProvidePlugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ProvidePlugin = require('webpack/lib/ProvidePlugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const isProd = process.env.NODE_ENV === 'production';
+module.exports = (env, argv) => {
+  const isProd = argv.mode === 'production'
 
-let plugins = [
-  new ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    'window.jQuery': 'jquery',
-    Popper: ['popper.js', 'default'],
-  }),
-  new ExtractTextPlugin({
-    filename: '[name]' + (isProd ? '.min' : '') + '.css',
-    allChunks: true,
-  }),
-];
+  const plugins = [
+    new ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default'],
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name]' + (isProd ? '.min' : '') + '.css',
+    }),
+  ]
 
-module.exports = {
-  entry: {
-    'select2-bootstrap4': [
-      './src/layout.scss',
-    ],
-  },
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].js',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
+  return {
+    entry: {
+      'select2-bootstrap4': [
+        './src/layout.scss',
+      ],
+    },
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      filename: '[name].js',
+    },
+    module: {
+      rules: [
+        {
+          test: /\.scss$/,
           use: [
-            {
-              loader: 'css-loader',
-            },
+            MiniCssExtractPlugin.loader,
+            'css-loader',
             {
               loader: 'postcss-loader',
               options: {
-                plugins: () => {
-                  let plugins = [
-                    require('precss'),  // bootstrap4 requires this
-                    require('autoprefixer'),
-                  ];
-                  if (isProd) {
-                    plugins = plugins.concat([
-                      require('cssnano')({ preset: 'default' }),
-                    ])
-                  }
-
-                  return plugins;
+                postcssOptions: {
+                  plugins: [
+                    'autoprefixer',
+                  ],
                 },
               },
             },
             {
               loader: 'sass-loader',
               options: {
-                prependData: `
+                additionalData: `
                   @import "~bootstrap/scss/functions";
                   @import "~bootstrap/scss/variables";
                   @import "~bootstrap/scss/mixins";
                 `
-              }
+              },
             },
           ],
-        }),
-      },
-    ],
-  },
-  plugins: plugins,
-};
+        },
+      ],
+    },
+    plugins: plugins,
+  }
+}
