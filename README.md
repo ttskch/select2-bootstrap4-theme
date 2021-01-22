@@ -39,5 +39,5 @@ You can use [docs](docs) dir for your development.
 
 1. Do `npm run prepare` (this creates symlink to `dist/select2-bootstrap4.css` onto `docs`)
 1. Serve `docs` with your local web server (e.g. `php -S localhost:8888 -t docs`)
-1. Do `npm watch`
+1. Do `npm run watch`
 1. Tweak scss and browse demo page on your browser
