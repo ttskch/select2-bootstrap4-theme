@@ -48,6 +48,8 @@
     float: left;
     margin-top: 0.3em;
     margin-right: 5px; }
+  .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice + .select2-search {
+    width: 0; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice__remove {
     color: #bdc6d0;
     font-weight: bold;
@@ -127,9 +129,6 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
 
 .select2-container--bootstrap4 .select2-search {
   width: 100%; }
-
-.select2-container--bootstrap4 .select2-selection__choice + .select2-search {
-  width: 0; }
 
 .select2-container--bootstrap4 .select2-dropdown {
   border-color: #ced4da;

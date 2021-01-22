@@ -26,6 +26,11 @@
       margin-right: 5px;
     }
 
+    // fixes placeholder width
+    .select2-selection__choice + .select2-search {
+      width: 0;
+    }
+
     // x button of each selected item in input box
     .select2-selection__choice__remove {
       color: darken($light, 20%);
