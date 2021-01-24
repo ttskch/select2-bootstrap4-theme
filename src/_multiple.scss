@@ -68,11 +68,16 @@
     .select2-selection--multiple {
       .select2-selection__choice {
         padding: 0 5px;
+        cursor: not-allowed;
         // stylelint-disable selector-max-class
         .select2-selection__choice__remove {
           display: none;
         }
         // stylelint-enable selector-max-class
+      }
+
+      .select2-search__field {
+        cursor: not-allowed;
       }
     }
   }
