@@ -33,7 +33,7 @@ $('select').select2({
 
 1. Fix [src/layout.scss](src/layout.scss), [src/_single.scss](src/_single.scss) or [src/_multiple.scss](src/_multiple.scss)
 1. Do `npm run build:both`
-1. Send me a Pull Requeest
+1. Send me a Pull Request
 
 You can use [docs](docs) dir for your development.
 
