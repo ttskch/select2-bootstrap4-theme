@@ -25,6 +25,17 @@
   border-bottom-right-radius: 0;
 }
 
+// form-control-sm
+.form-control-sm + .select2-container--bootstrap4 {
+  .select2-selection {
+    height: $input-height-sm !important;
+    @include font-size($input-font-size-sm);
+    .select2-selection__rendered {
+      margin-top: -0.2em;
+    }
+  }
+}
+
 .select2-container--bootstrap4 {
 
   // input box
