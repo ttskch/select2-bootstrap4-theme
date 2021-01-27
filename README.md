@@ -16,7 +16,7 @@
 
 ```html
 <link rel="stylesheet" href="/path/to/select2.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css">
 ```
 
 ### Manually
@@ -31,7 +31,7 @@ $ yarn add @ttskch/select2-bootstrap4-theme
 
 ```html
 <link rel="stylesheet" href="/path/to/select2.css">
-<link rel="stylesheet" href="/path/to/select2-bootstrap4.css">
+<link rel="stylesheet" href="/path/to/select2-bootstrap4.min.css">
 ```
 
 ## Usage
