@@ -2,6 +2,7 @@ const path = require('path')
 
 const ProvidePlugin = require('webpack/lib/ProvidePlugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production'
@@ -16,12 +17,15 @@ module.exports = (env, argv) => {
     new MiniCssExtractPlugin({
       filename: '[name]' + (isProd ? '.min' : '') + '.css',
     }),
+    new StyleLintPlugin({
+      files: './src/**/*.(s(c|a)ss|css)'
+    })
   ]
 
   return {
     entry: {
       'select2-bootstrap4': [
-        './src/layout.scss',
+        './src/select2-bootstrap4.scss',
       ],
     },
     output: {

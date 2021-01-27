@@ -2,28 +2,34 @@
   .select2-selection--multiple {
 
     // height of input box
-    min-height: $input-height !important;
+    min-height: $input-height !important; // stylelint-disable-line declaration-no-important
 
     // input box
     .select2-selection__rendered {
       box-sizing: border-box;
-      list-style: none;
-      margin: 0;
-      padding: 0 8px;
       width: 100%;
+      padding: 0 $input-padding-x;
+      margin: 0;
+      list-style: none;
     }
 
     // each selected item in input box
     .select2-selection__choice {
-      color: $dark;
-      border: 1px solid darken($light, 20%);
-      @include border-radius($input-border-radius-sm);
-      padding: 0;
-      padding-right: 5px;
-      cursor: pointer;
       float: left;
-      margin-top: 0.3em;
-      margin-right: 5px;
+      padding: 0;
+      padding-right: $input-padding-x;
+      margin-top: calc(#{$input-padding-y} - 2px);
+      margin-right: $input-padding-x / 2;
+      color: $input-color;
+      cursor: pointer;
+      border: 1px solid darken($light, 20%);
+
+      @include border-radius($input-border-radius-sm);
+    }
+
+    // search field
+    .select2-search__field {
+      color: $input-color;
     }
 
     // fixes placeholder width
@@ -33,13 +39,13 @@
 
     // x button of each selected item in input box
     .select2-selection__choice__remove {
-      color: darken($light, 20%);
-      font-weight: bold;
-      margin-left: 3px;
-      margin-right: 1px;
+      float: left;
       padding-right: 3px;
       padding-left: 3px;
-      float: left;
+      margin-right: 1px;
+      margin-left: 3px;
+      font-weight: 700;
+      color: darken($light, 20%);
 
       &:hover {
         color: $dark;
@@ -48,13 +54,12 @@
 
     // all clear button
     .select2-selection__clear {
+      position: absolute !important; // stylelint-disable-line declaration-no-important
+      top: 0;
+      right: .7em;
       // overwrite layout.scss
       float: none;
       margin-right: 0;
-
-      position: absolute !important;
-      top: 0;
-      right: 0.7em;
     }
   }
 
@@ -63,9 +68,16 @@
     .select2-selection--multiple {
       .select2-selection__choice {
         padding: 0 5px;
+        cursor: not-allowed;
+        // stylelint-disable selector-max-class
         .select2-selection__choice__remove {
           display: none;
         }
+        // stylelint-enable selector-max-class
+      }
+
+      .select2-search__field {
+        cursor: not-allowed;
       }
     }
   }
