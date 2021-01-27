@@ -12,16 +12,29 @@
 
 ## Installation
 
-```bash
-$ npm install @ttskch/select2-bootstrap4-theme
+### CDN
+
+```html
+<link rel="stylesheet" href="/path/to/select2.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.css">
 ```
 
-## Usage
+### Manually
+
+```bash
+# npm
+$ npm install @ttskch/select2-bootstrap4-theme
+
+# yarn
+$ yarn add @ttskch/select2-bootstrap4-theme
+```
 
 ```html
 <link rel="stylesheet" href="/path/to/select2.css">
 <link rel="stylesheet" href="/path/to/select2-bootstrap4.css">
 ```
+
+## Usage
 
 ```js
 $('select').select2({
