@@ -29,7 +29,6 @@
     width: 100%;
     background-color: $input-bg;
     border: $input-border-width solid $input-border-color;
-
     @include border-radius($input-border-radius);
     @include box-shadow($input-box-shadow);
     @include transition($input-transition);
@@ -45,7 +44,6 @@
     // when open, hide bottom border
     &.select2-container--open .select2-selection {
       border-bottom: none;
-
       @include border-bottom-radius(0);
     }
   }
@@ -57,7 +55,6 @@
         @include border-top-radius(0);
       }
     }
-
     &.select2-container--below {
       .select2-selection {
         @include border-bottom-radius(0);
@@ -74,7 +71,6 @@
       border-color: $input-border-color;
       box-shadow: none;
     }
-
     .select2-search__field {
       background-color: transparent;
     }
@@ -86,7 +82,6 @@
   form.was-validated select:invalid ~ & .select2-selection {
     border-color: $danger;
   }
-
   select.is-valid ~ & .select2-selection,
   form.was-validated select:valid ~ & .select2-selection {
     border-color: $success;
@@ -106,14 +101,12 @@
     // dropdown opened below
     &.select2-dropdown--below {
       border-top: none;
-
       @include border-bottom-radius($input-border-radius);
     }
 
     // dropdown opened above
     &.select2-dropdown--above {
       border-top: 1px solid $input-border-color;
-
       @include border-top-radius($input-border-radius);
     }
 
@@ -134,7 +127,6 @@
   // for <optgroup>
   .select2-results__option[role="group"] {
     padding: 0;
-
     .select2-results__options--nested .select2-results__option {
       padding-left: 1em;
     }
@@ -159,9 +151,7 @@
   // all clear button
   .select2-selection__clear {
     $bg: #c8c8c8;
-
     float: right;
-
     width: .9em;
     height: .9em;
     padding-left: .15em;
@@ -169,10 +159,8 @@
     margin-right: .3em;
     line-height: .75em;
     color: $light;
-
     background-color: $bg;
     border-radius: 100%;
-
     &:hover {
       background-color: darken($bg, 10%);
     }

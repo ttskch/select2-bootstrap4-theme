@@ -23,7 +23,6 @@
       color: $input-color;
       cursor: pointer;
       border: 1px solid darken($light, 20%);
-
       @include border-radius($input-border-radius-sm);
     }
 
@@ -46,7 +45,6 @@
       margin-left: 3px;
       font-weight: 700;
       color: darken($light, 20%);
-
       &:hover {
         color: $dark;
       }
@@ -75,7 +73,6 @@
         }
         // stylelint-enable selector-max-class
       }
-
       .select2-search__field {
         cursor: not-allowed;
       }
