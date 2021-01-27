@@ -9,7 +9,9 @@
     "build:prod": "webpack --config webpack.config.js --mode production",
     "build:both": "npm run build && npm run build:prod",
     "prepare": "ln -sf ../dist/select2-bootstrap4.css docs/",
-    "watch": "npm run prepare && npm run build -- --watch"
+    "watch": "npm run prepare && npm run build -- --watch",
+    "lint": "stylelint ./src/**/*.{scss,sass,css}",
+    "lint:fix": "stylelint ./src/**/*.{scss,sass,css} --fix"
   },
   "repository": {
     "type": "git",
