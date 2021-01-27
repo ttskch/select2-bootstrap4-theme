@@ -18,8 +18,8 @@ module.exports = (env, argv) => {
       filename: '[name]' + (isProd ? '.min' : '') + '.css',
     }),
     new StyleLintPlugin({
-      files: './src/**/*.(s(c|a)ss|css)'
-    })
+      files: './src/**/*.(scss|sass|css)',
+    }),
   ]
 
   return {
