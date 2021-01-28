@@ -2,5 +2,6 @@ node_modules
 package-lock.json
 yarn.lock
 dist/*.js
-
+vendor
+composer.lock
 docs/select2-bootstrap4.css
