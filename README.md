@@ -1,8 +1,10 @@
 # select2-bootstrap4-theme
 
 [![npm version](https://img.shields.io/npm/v/@ttskch/select2-bootstrap4-theme.svg?style=flat-square)](https://www.npmjs.com/package/@ttskch/select2-bootstrap4-theme)
-[![npm downloads](https://img.shields.io/npm/dm/@ttskch/select2-bootstrap4-theme.svg?style=flat-square)](https://www.npmjs.com/package/@ttskch/select2-bootstrap4-theme)
+[![npm](https://img.shields.io/npm/dm/@ttskch/select2-bootstrap4-theme?label=npm&style=flat-square)](https://www.npmjs.com/package/@ttskch/select2-bootstrap4-theme)
 [![](https://data.jsdelivr.com/v1/package/npm/@ttskch/select2-bootstrap4-theme/badge)](https://www.jsdelivr.com/package/npm/@ttskch/select2-bootstrap4-theme)
+[![Packagist Version](https://img.shields.io/packagist/v/ttskch/select2-bootstrap4-theme?style=flat-square)](https://packagist.org/packages/ttskch/select2-bootstrap4-theme)
+[![Packagist Downloads](https://img.shields.io/packagist/dm/ttskch/select2-bootstrap4-theme?label=packagist&style=flat-square)](https://packagist.org/packages/ttskch/select2-bootstrap4-theme)
 
 [Select2](https://github.com/select2/select2) v4 theme for Bootstrap4 (Compatible to boostrap 4.0.0+)
 
@@ -27,6 +29,9 @@ $ npm install @ttskch/select2-bootstrap4-theme
 
 # yarn
 $ yarn add @ttskch/select2-bootstrap4-theme
+
+# composer
+$ composer require ttskch/select2-bootstrap4-theme
 ```
 
 ```html
