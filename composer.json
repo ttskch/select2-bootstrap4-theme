@@ -1,0 +1,21 @@
+{
+  "name": "ttskch/select2-bootstrap4-theme",
+  "description": "Select2 v4 theme for Bootstrap4 (Compatible to boostrap 4.0.0+)",
+  "keywords": [
+    "css",
+    "sass",
+    "select2",
+    "bootstrap4",
+    "theme"
+  ],
+  "homepage": "https://github.com/ttskch/select2-bootstrap4-theme",
+  "authors": [
+    {
+      "name": "Takashi Kanemoto"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ttskch/select2-bootstrap4-theme/issues"
+  },
+  "license": "MIT"
+}
