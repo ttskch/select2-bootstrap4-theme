@@ -25,7 +25,7 @@
     "css",
     "scss"
   ],
-  "author": "ttskch",
+  "author": "Takashi Kanemoto <ttskch@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ttskch/select2-bootstrap4-theme/issues"
