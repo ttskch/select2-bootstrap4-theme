@@ -1,5 +1,9 @@
 // Inherit from Bootstrap variables
-$select2-bootstrap4-placeholder-color: $input-placeholder-color !default;
+$select2-bootstrap4-enable-validation-icons: $enable-validation-icons !default;
+
+$select2-bootstrap4-placeholder-color:    $input-placeholder-color !default;
+$select2-bootstrap4-height-inner:         $input-height-inner !default;
+$select2-bootstrap4-height-inner-quarter: $input-height-inner-quarter !default;
 
 $select2-bootstrap4-transition: $custom-forms-transition !default;
 
@@ -24,10 +28,18 @@ $select2-bootstrap4-indicator-color:   $custom-select-indicator-color !default;
 $select2-bootstrap4-indicator:         $custom-select-indicator !default;
 $select2-bootstrap4-background:        $custom-select-background !default;
 
+// `feedback-icon-padding-right` adds some extra space compared to Boostrap
+// because of the clear button
+$select2-bootstrap4-feedback-icon-padding-right: add(1em, (2 * $select2-bootstrap4-padding-y * .75) + $select2-bootstrap4-padding-x + $select2-bootstrap4-indicator-padding) !default;
+$select2-bootstrap4-feedback-icon-position:      $custom-select-feedback-icon-position !default;
+$select2-bootstrap4-feedback-icon-size:          $custom-select-feedback-icon-size !default;
+
 $select2-bootstrap4-border-width:  $custom-select-border-width !default;
 $select2-bootstrap4-border-color:  $custom-select-border-color !default;
 $select2-bootstrap4-border-radius: $custom-select-border-radius !default;
 $select2-bootstrap4-box-shadow:    $custom-select-box-shadow !default;
+
+$select2-bootstrap4-validation-states: $form-validation-states !default;
 
 // Font family fallback. Needed because `$custom-select-font-family` defaults
 // to `null`, but Select2 comes with a `font-family: sans-serif` CSS rule that

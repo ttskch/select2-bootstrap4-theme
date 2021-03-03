@@ -65,6 +65,22 @@
       top: $select2-bootstrap4-padding-y;
       right: $select2-bootstrap4-padding-x;
     }
+
+    // stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
+    @if $select2-bootstrap4-enable-validation-icons {
+      @each $state, $data in $select2-bootstrap4-validation-states {
+        select.is-#{$state} ~ &,
+        form.was-validated select:#{$state} ~ & {
+          padding-right: $select2-bootstrap4-height-inner !important; // stylelint-disable-line declaration-no-important
+          background: $select2-bootstrap4-bg escape-svg(map-get($data, icon)) top $select2-bootstrap4-height-inner-quarter right $select2-bootstrap4-height-inner-quarter / $select2-bootstrap4-feedback-icon-size no-repeat;
+
+          .select2-selection__clear {
+            right: $select2-bootstrap4-height-inner;
+          }
+        }
+      }
+    }
+    // stylelint-enable selector-no-qualifying-type, selector-max-compound-selectors
   }
 
   // hide x button of each selected item in disabled input box

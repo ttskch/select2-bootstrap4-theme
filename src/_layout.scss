@@ -76,23 +76,17 @@
 
   // validated input box
   // stylelint-disable selector-no-qualifying-type
-  select.is-invalid ~ & .select2-selection,
-  form.was-validated select:invalid ~ & .select2-selection {
-    border-color: $danger;
+  @each $state, $data in $select2-bootstrap4-validation-states {
+    select.is-#{$state} ~ &,
+    form.was-validated select:#{$state} ~ & {
+      .select2-selection {
+        border-color: map-get($data, color);
+      }
 
-    &:focus {
-      border-color: $danger;
-      box-shadow: 0 0 0 $select2-bootstrap4-focus-width rgba($danger, .25);
-    }
-  }
-
-  select.is-valid ~ & .select2-selection,
-  form.was-validated select:valid ~ & .select2-selection {
-    border-color: $success;
-
-    &:focus {
-      border-color: $success;
-      box-shadow: 0 0 0 $select2-bootstrap4-focus-width rgba($danger, .25);
+      &.select2-container--focus .select2-selection {
+        border-color: map-get($data, color);
+        box-shadow: 0 0 0 $select2-bootstrap4-focus-width rgba(map-get($data, color), .25);
+      }
     }
   }
   // stylelint-enable selector-no-qualifying-type

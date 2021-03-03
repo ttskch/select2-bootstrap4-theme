@@ -52,21 +52,23 @@
   border-color: #ced4da;
   box-shadow: none; }
 
-select.is-invalid ~ .select2-container--bootstrap4 .select2-selection,
-form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection {
-  border-color: #dc3545; }
-  select.is-invalid ~ .select2-container--bootstrap4 .select2-selection:focus,
-  form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection:focus {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-
 select.is-valid ~ .select2-container--bootstrap4 .select2-selection,
 form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-selection {
   border-color: #28a745; }
-  select.is-valid ~ .select2-container--bootstrap4 .select2-selection:focus,
-  form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-selection:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
+
+select.is-valid ~ .select2-container--bootstrap4.select2-container--focus .select2-selection,
+form.was-validated select:valid ~ .select2-container--bootstrap4.select2-container--focus .select2-selection {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
+
+select.is-invalid ~ .select2-container--bootstrap4 .select2-selection,
+form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection {
+  border-color: #dc3545; }
+
+select.is-invalid ~ .select2-container--bootstrap4.select2-container--focus .select2-selection,
+form.was-validated select:invalid ~ .select2-container--bootstrap4.select2-container--focus .select2-selection {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
 
 .select2-container--bootstrap4 .select2-dropdown {
   border-color: #ced4da;
@@ -123,6 +125,14 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
 
 .select2-container--bootstrap4 .select2-selection--single {
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat; }
+  select.is-valid ~ .select2-container--bootstrap4 .select2-selection--single,
+  form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-selection--single {
+    padding-right: calc(1em + 2.3125rem) !important;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat; }
+  select.is-invalid ~ .select2-container--bootstrap4 .select2-selection--single,
+  form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection--single {
+    padding-right: calc(1em + 2.3125rem) !important;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat; }
   .select2-container--bootstrap4 .select2-selection--single .select2-selection__placeholder {
     color: #6c757d; }
   .select2-container--bootstrap4 .select2-selection--single .select2-selection__rendered {
@@ -186,6 +196,20 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
     position: absolute;
     top: 0.375rem;
     right: 0.75rem; }
+  select.is-valid ~ .select2-container--bootstrap4 .select2-selection--multiple,
+  form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-selection--multiple {
+    padding-right: calc(1.5em + 0.75rem) !important;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem)/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat; }
+    select.is-valid ~ .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear,
+    form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear {
+      right: calc(1.5em + 0.75rem); }
+  select.is-invalid ~ .select2-container--bootstrap4 .select2-selection--multiple,
+  form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection--multiple {
+    padding-right: calc(1.5em + 0.75rem) !important;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem)/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat; }
+    select.is-invalid ~ .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear,
+    form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear {
+      right: calc(1.5em + 0.75rem); }
 
 .select2-container--bootstrap4.select2-container--disabled .select2-selection--multiple .select2-selection__choice {
   padding-left: 5px;
