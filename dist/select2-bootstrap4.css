@@ -55,10 +55,18 @@
 select.is-invalid ~ .select2-container--bootstrap4 .select2-selection,
 form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection {
   border-color: #dc3545; }
+  select.is-invalid ~ .select2-container--bootstrap4 .select2-selection:focus,
+  form.was-validated select:invalid ~ .select2-container--bootstrap4 .select2-selection:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
 
 select.is-valid ~ .select2-container--bootstrap4 .select2-selection,
 form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-selection {
   border-color: #28a745; }
+  select.is-valid ~ .select2-container--bootstrap4 .select2-selection:focus,
+  form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-selection:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
 
 .select2-container--bootstrap4 .select2-dropdown {
   border-color: #ced4da;

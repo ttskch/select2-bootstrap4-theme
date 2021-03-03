@@ -1,11 +1,3 @@
-$s2bs4-selection-clear-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 16 16'><path fill='#{$custom-select-color}' d='M1 12l4-4-4-4 3-3 4 4 4-4 3 3-4 4 4 4-3 3-4-4-4 4z'/></svg>") !default;
-
-// `font-family` fallback. This is needed because `$custom-select-font-family`
-// defaults to null, but this theme needs an existing value to override
-// Select2's `font-family: sans-serif` rule
-$s2bs4-font-family: $custom-select-font-family !default;
-$s2bs4-font-family: $font-family-base !default;
-
 // basic
 .select2-container {
   display: block;
@@ -36,25 +28,25 @@ $s2bs4-font-family: $font-family-base !default;
   // input box
   .select2-selection {
     width: 100%;
-    min-height: $custom-select-height;
-    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
-    font-family: $s2bs4-font-family;
-    @include font-size($custom-select-font-size);
-    font-weight: $custom-select-font-weight;
-    line-height: $custom-select-line-height;
-    color: $custom-select-color;
+    min-height: $select2-bootstrap4-height;
+    padding: $select2-bootstrap4-padding-y ($select2-bootstrap4-padding-x + $select2-bootstrap4-indicator-padding) $select2-bootstrap4-padding-y $select2-bootstrap4-padding-x;
+    font-family: $select2-bootstrap4-font-family;
+    @include font-size($select2-bootstrap4-font-size);
+    font-weight: $select2-bootstrap4-font-weight;
+    line-height: $select2-bootstrap4-line-height;
+    color: $select2-bootstrap4-color;
     vertical-align: middle;
-    background-color: $custom-select-bg;
-    border: $custom-select-border-width solid $custom-select-border-color;
-    @include border-radius($custom-select-border-radius, 0);
-    @include box-shadow($custom-select-box-shadow);
-    @include transition($custom-forms-transition);
+    background-color: $select2-bootstrap4-bg;
+    border: $select2-bootstrap4-border-width solid $select2-bootstrap4-border-color;
+    @include border-radius($select2-bootstrap4-border-radius, 0);
+    @include box-shadow($select2-bootstrap4-box-shadow);
+    @include transition($select2-bootstrap4-transition);
   }
 
   &.select2-container--focus {
     .select2-selection {
-      border-color: $custom-select-focus-border-color;
-      box-shadow: $custom-select-focus-box-shadow;
+      border-color: $select2-bootstrap4-focus-border-color;
+      box-shadow: $select2-bootstrap4-focus-box-shadow;
     }
   }
 
@@ -76,8 +68,8 @@ $s2bs4-font-family: $font-family-base !default;
     .select2-selection,
     .select2-search__field {
       cursor: not-allowed;
-      background-color: $custom-select-disabled-bg;
-      border-color: $custom-select-border-color;
+      background-color: $select2-bootstrap4-disabled-bg;
+      border-color: $select2-bootstrap4-border-color;
       box-shadow: none;
     }
   }
@@ -87,64 +79,74 @@ $s2bs4-font-family: $font-family-base !default;
   select.is-invalid ~ & .select2-selection,
   form.was-validated select:invalid ~ & .select2-selection {
     border-color: $danger;
+
+    &:focus {
+      border-color: $danger;
+      box-shadow: 0 0 0 $select2-bootstrap4-focus-width rgba($danger, .25);
+    }
   }
 
   select.is-valid ~ & .select2-selection,
   form.was-validated select:valid ~ & .select2-selection {
     border-color: $success;
+
+    &:focus {
+      border-color: $success;
+      box-shadow: 0 0 0 $select2-bootstrap4-focus-width rgba($danger, .25);
+    }
   }
   // stylelint-enable selector-no-qualifying-type
 
   .select2-dropdown {
-    border-color: $custom-select-border-color;
+    border-color: $select2-bootstrap4-border-color;
     border-radius: 0; // overload select2.css
 
     &.select2-dropdown--below {
-      @include border-bottom-radius($custom-select-border-radius);
+      @include border-bottom-radius($select2-bootstrap4-border-radius);
     }
 
     &.select2-dropdown--above {
-      @include border-top-radius($custom-select-border-radius);
+      @include border-top-radius($select2-bootstrap4-border-radius);
     }
   }
 
   .select2-results__option {
-    padding: $custom-select-padding-y $custom-select-padding-x;
+    padding: $select2-bootstrap4-padding-y $select2-bootstrap4-padding-x;
 
     &--selected {
-      color: color-yiq($custom-select-disabled-bg);
-      background-color: $custom-select-disabled-bg;
+      color: color-yiq($select2-bootstrap4-disabled-bg);
+      background-color: $select2-bootstrap4-disabled-bg;
     }
 
     &--disabled {
-      color: $custom-select-disabled-color;
+      color: $select2-bootstrap4-disabled-color;
     }
 
     // hover
     &--highlighted {
-      color: color-yiq($primary);
-      background-color: $primary;
+      color: color-yiq($select2-bootstrap4-highlighted-bg);
+      background-color: $select2-bootstrap4-highlighted-bg;
     }
 
     &--group {
       padding: 0;
 
       .select2-results__options--nested .select2-results__option {
-        padding-left: $custom-select-padding-x;
+        padding-left: $select2-bootstrap4-padding-x;
       }
     }
   }
 
   // vertical overflow
   .select2-results > .select2-results__options {
-    max-height: 15em;
+    max-height: $select2-bootstrap4-dropdown-height;
     overflow-y: auto;
   }
 
   .select2-results__group {
     display: list-item;
-    padding: $custom-select-padding-y $custom-select-padding-x / 2;
-    color: $secondary;
+    padding: $select2-bootstrap4-padding-y $select2-bootstrap4-padding-x / 2;
+    color: $select2-bootstrap4-disabled-color;
   }
 
   // clear all button
@@ -153,11 +155,11 @@ $s2bs4-font-family: $font-family-base !default;
     width: 1em;
     height: 1em;
     padding: 0;
-    margin: subtract($custom-select-line-height * 1em, 1em) / 2 0 0;
+    margin: subtract($select2-bootstrap4-line-height * 1em, 1em) / 2 0 0;
     font-weight: 700;
     line-height: (12em / 16);
-    color: $custom-select-color;
-    background: darken($custom-select-bg, 10%) escape-svg($s2bs4-selection-clear-icon) center no-repeat !important; // stylelint-disable-line declaration-no-important
+    color: $select2-bootstrap4-color;
+    background: darken($select2-bootstrap4-bg, 10%) escape-svg($select2-bootstrap4-selection-clear-icon) center no-repeat !important; // stylelint-disable-line declaration-no-important
     border-radius: 100%;
 
     // hide default &times; entity
@@ -166,7 +168,7 @@ $s2bs4-font-family: $font-family-base !default;
     }
 
     &:hover {
-      background-color: darken($custom-select-bg, 15%) !important; // stylelint-disable-line declaration-no-important
+      background-color: darken($select2-bootstrap4-bg, 15%) !important; // stylelint-disable-line declaration-no-important
     }
   }
 

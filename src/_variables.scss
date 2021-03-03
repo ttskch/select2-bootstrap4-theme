@@ -1,0 +1,42 @@
+// Inherit from Bootstrap variables
+$select2-bootstrap4-placeholder-color: $input-placeholder-color !default;
+
+$select2-bootstrap4-transition: $custom-forms-transition !default;
+
+$select2-bootstrap4-focus-border-color: $custom-select-focus-border-color !default;
+$select2-bootstrap4-focus-width:        $custom-select-focus-width !default;
+$select2-bootstrap4-focus-box-shadow:   $custom-select-focus-box-shadow;
+
+$select2-bootstrap4-padding-y:         $custom-select-padding-y !default;
+$select2-bootstrap4-padding-x:         $custom-select-padding-x !default;
+$select2-bootstrap4-font-family:       $custom-select-font-family !default;
+$select2-bootstrap4-font-size:         $custom-select-font-size !default;
+$select2-bootstrap4-height:            $custom-select-height !default;
+$select2-bootstrap4-indicator-padding: $custom-select-indicator-padding !default;
+$select2-bootstrap4-font-weight:       $custom-select-font-weight !default;
+$select2-bootstrap4-line-height:       $custom-select-line-height !default;
+$select2-bootstrap4-color:             $custom-select-color !default;
+$select2-bootstrap4-disabled-color:    $custom-select-disabled-color !default;
+$select2-bootstrap4-bg:                $custom-select-bg !default;
+$select2-bootstrap4-disabled-bg:       $custom-select-disabled-bg !default;
+$select2-bootstrap4-bg-size:           $custom-select-bg-size !default;
+$select2-bootstrap4-indicator-color:   $custom-select-indicator-color !default;
+$select2-bootstrap4-indicator:         $custom-select-indicator !default;
+$select2-bootstrap4-background:        $custom-select-background !default;
+
+$select2-bootstrap4-border-width:  $custom-select-border-width !default;
+$select2-bootstrap4-border-color:  $custom-select-border-color !default;
+$select2-bootstrap4-border-radius: $custom-select-border-radius !default;
+$select2-bootstrap4-box-shadow:    $custom-select-box-shadow !default;
+
+// Font family fallback. Needed because `$custom-select-font-family` defaults
+// to `null`, but Select2 comes with a `font-family: sans-serif` CSS rule that
+// this theme needs to override
+$select2-bootstrap4-font-family: $font-family-base !default;
+
+// New variables specific to the theme
+$select2-bootstrap4-dropdown-height:                15em !default;
+$select2-bootstrap4-highlighted-bg:                 $primary !default;
+$select2-bootstrap4-selection-choice-bg:            $secondary !default;
+$select2-bootstrap4-selection-choice-border-radius: $border-radius-sm !default;
+$select2-bootstrap4-selection-clear-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 16 16'><path fill='#{$select2-bootstrap4-color}' d='M1 12l4-4-4-4 3-3 4 4 4-4 3 3-4 4 4 4-3 3-4-4-4 4z'/></svg>") !default;

@@ -1,25 +1,25 @@
 .select2-container--bootstrap4 {
   .select2-selection--single {
-    background: $custom-select-bg $custom-select-background;
+    background: $select2-bootstrap4-bg $select2-bootstrap4-background;
 
     .select2-selection__placeholder {
-      color: $input-placeholder-color;
+      color: $select2-bootstrap4-placeholder-color;
     }
 
     // selected item
     .select2-selection__rendered {
       padding: 0;
-      color: $custom-select-color;
+      color: $select2-bootstrap4-color;
     }
   }
 
   // search box
   .select2-search--dropdown {
     .select2-search__field {
-      padding: $custom-select-padding-y $custom-select-padding-x;
-      color: $custom-select-color;
-      border: $custom-select-border-width solid $custom-select-border-color;
-      @include border-radius($custom-select-border-radius);
+      padding: $select2-bootstrap4-padding-y $select2-bootstrap4-padding-x;
+      color: $select2-bootstrap4-color;
+      border: $select2-bootstrap4-border-width solid $select2-bootstrap4-border-color;
+      @include border-radius($select2-bootstrap4-border-radius);
       @include form-control-focus(true);
     }
   }
