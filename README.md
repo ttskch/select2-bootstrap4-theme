@@ -49,13 +49,15 @@ $('select').select2({
 
 ## Getting involved
 
-1. Fix [src/_layout.scss](src/_layout.scss), [src/_single.scss](src/_single.scss) or [src/_multiple.scss](src/_multiple.scss)
-1. Do `npm run build:both`
-1. Send me a Pull Request
+1. Edit SCSS files in the [src folder](src)
+1. Run `npm run build:both`
+1. Send a Pull Request
 
 You can use [docs](docs) dir for your development.
 
-1. Do `npm run prepare` (this creates symlink to `dist/select2-bootstrap4.css` onto `docs`)
-1. Serve `docs` with your local web server (e.g. `php -S localhost:8888 -t docs`)
-1. Do `npm run watch`
-1. Tweak scss and browse demo page on your browser
+1. Run `npm run prepare` (this creates symlink to `dist/select2-bootstrap4.css` onto `docs`)
+1. Serve `docs` from your local web server, examples:
+    - Using PHP: `php -S localhost:8888 -t docs`
+    - Using Python 3: `python3 -m http.server -d docs 8888`
+1. Run `npm run watch`
+1. Tweak SCSS and browse demo page on your browser
