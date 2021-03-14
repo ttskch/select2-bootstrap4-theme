@@ -1,30 +1,27 @@
-// basic
-.select2-container {
+.select2-container--bootstrap4 {
   display: block;
 
   *:focus {
     outline: 0;
   }
-}
 
-// input-group
-.input-group .select2-container--bootstrap4 {
-  flex-grow: 1;
-}
+  // input-group
+  .input-group & {
+    flex-grow: 1;
+  }
 
-// for prepended input
-.input-group-prepend ~ .select2-container--bootstrap4 .select2-selection {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
+  // for prepended input
+  .input-group-prepend ~ & .select2-selection {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 
-// for appended input
-.input-group > .select2-container--bootstrap4:not(:last-child) .select2-selection {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
+  // for appended input
+  .input-group > &:not(:last-child) .select2-selection {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
-.select2-container--bootstrap4 {
   // input box
   .select2-selection {
     width: 100%;
