@@ -102,6 +102,7 @@
   }
 
   .select2-results__option {
+    min-height: $select2-bootstrap4-height-inner;
     padding: $select2-bootstrap4-padding-y $select2-bootstrap4-padding-x;
 
     &--selected {

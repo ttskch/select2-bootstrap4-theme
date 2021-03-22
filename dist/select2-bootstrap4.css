@@ -67,6 +67,7 @@
       border-top-left-radius: 0.25rem;
       border-top-right-radius: 0.25rem; }
   .select2-container--bootstrap4 .select2-results__option {
+    min-height: calc(1.5em + 0.75rem);
     padding: 0.375rem 0.75rem; }
     .select2-container--bootstrap4 .select2-results__option--selected {
       color: #212529;
