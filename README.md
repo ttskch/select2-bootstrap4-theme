@@ -43,7 +43,8 @@ $ composer require ttskch/select2-bootstrap4-theme
 
 ```js
 $('select').select2({
-    theme: 'bootstrap4',
+  theme: 'bootstrap4',
+  width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style'
 });
 ```
 
