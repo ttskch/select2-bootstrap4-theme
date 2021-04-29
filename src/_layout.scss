@@ -95,6 +95,7 @@
 
   // dropdown
   .select2-dropdown {
+    background-color: $bg-body;
     border-color: $input-border-color;
     border-radius: 0; // overwrite select2.css
 
