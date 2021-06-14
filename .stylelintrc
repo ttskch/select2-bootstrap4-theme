@@ -3,6 +3,13 @@
     "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
-    "selector-class-pattern": "^[a-z][a-z0-9\\-_]*[a-z0-9]$"
+    "block-closing-brace-empty-line-before": "never",
+    "declaration-no-important": null,
+    "rule-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    }],
+    "selector-class-pattern": "^[a-z][a-z0-9\\-_]*[a-z0-9]$",
+    "selector-no-qualifying-type": null
   }
 }

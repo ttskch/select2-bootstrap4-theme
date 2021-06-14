@@ -1,52 +1,38 @@
 .select2-container--bootstrap4 {
   .select2-selection--single {
+    background: $select2-bootstrap4-bg $select2-bootstrap4-background;
 
-    // height of input box
-    height: $input-height !important; // stylelint-disable-line declaration-no-important
-
-    // placeholder
-    .select2-selection__placeholder {
-      line-height: $input-height-inner;
-      color: $input-placeholder-color;
-    }
-
-    // arrow
-    .select2-selection__arrow {
-      position: absolute;
-      top: 50%;
-      right: 3px;
-      width: 20px;
-      b {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        margin-top: -2px;
-        margin-left: -4px;
-        border-color: $dark transparent transparent transparent;
-        border-style: solid;
-        border-width: 5px 4px 0;
+    // stylelint-disable selector-no-qualifying-type
+    @if $select2-bootstrap4-enable-validation-icons {
+      @each $state, $data in $select2-bootstrap4-validation-states {
+        select.is-#{$state} ~ &,
+        form.was-validated select:#{$state} ~ & {
+          padding-right: $select2-bootstrap4-feedback-icon-padding-right !important; // stylelint-disable-line declaration-no-important
+          background: $select2-bootstrap4-background, $select2-bootstrap4-bg escape-svg(map-get($data, icon)) $select2-bootstrap4-feedback-icon-position / $select2-bootstrap4-feedback-icon-size no-repeat;
+        }
       }
+    }
+    // stylelint-enable selector-no-qualifying-type
+
+    .select2-selection__placeholder {
+      color: $select2-bootstrap4-placeholder-color;
     }
 
     // selected item
     .select2-selection__rendered {
-      padding-left: $input-padding-x;
-      line-height: $input-height-inner;
-      color: $input-color;
+      padding: 0;
+      color: $select2-bootstrap4-color;
     }
   }
-}
 
-// search box
-.select2-search--dropdown .select2-search__field {
-  padding: $input-padding-y $input-padding-x;
-  border: $input-border-width solid $input-border-color;
-  @include border-radius($input-border-radius);
-}
-
-// no result message
-.select2-results__message {
-  color: $secondary;
+  // search box
+  .select2-search--dropdown {
+    .select2-search__field {
+      padding: $select2-bootstrap4-padding-y $select2-bootstrap4-padding-x;
+      color: $select2-bootstrap4-color;
+      border: $select2-bootstrap4-border-width solid $select2-bootstrap4-border-color;
+      @include border-radius($select2-bootstrap4-border-radius);
+      @include form-control-focus(true);
+    }
+  }
 }
