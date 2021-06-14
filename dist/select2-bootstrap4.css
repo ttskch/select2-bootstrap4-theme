@@ -151,6 +151,7 @@
     background-color: #6c757d;
     border-radius: 0.2rem; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice__display {
+    display: inline-block;
     padding: 0 5px; }
   .select2-container--bootstrap4 .select2-selection--multiple .select2-search__field {
     height: calc(1.5em + 0.75rem);
@@ -163,6 +164,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
     padding: 0 5px;
     margin: 0;
     font-weight: 700;
