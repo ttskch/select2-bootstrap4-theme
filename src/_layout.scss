@@ -92,6 +92,17 @@
   .select2-search {
     width: 100%;
   }
+  
+  // fixes search field background;
+  .select2-search--inline {
+    .select2-search__field {
+      background: transparent;
+      border: none;
+      outline: 0;
+      box-shadow: none;
+      -webkit-appearance: textfield;
+    }
+  }
 
   // dropdown
   .select2-dropdown {
