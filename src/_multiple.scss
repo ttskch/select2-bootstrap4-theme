@@ -8,7 +8,7 @@
     .select2-selection__rendered {
       box-sizing: border-box;
       width: 100%;
-      padding: 0 $input-padding-x / 2;
+      padding: 0 $input-padding-x * 0.5;
       margin: 0;
       list-style: none;
     }
@@ -19,7 +19,7 @@
       padding: 0;
       padding-right: $input-padding-x;
       margin-top: calc(#{$input-padding-y} - 2px);
-      margin-right: $input-padding-x / 2;
+      margin-right: $input-padding-x * 0.5;
       color: $input-color;
       cursor: pointer;
       border: 1px solid darken($light, 20%);
